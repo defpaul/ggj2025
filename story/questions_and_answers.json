@@ -1,0 +1,282 @@
+[
+    {
+        "question": "Hello, nice to meet you! How are you?",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "I’m fine thank you. I'm going on a trip in this beautiful weather. What about you?",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "My Head is bursting. Just leave me allone!",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "Excuse me?",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "That’s a good Idea! Where are you going?",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "I’m going on a walk in the mountains and have some beer at a „Hütte“ there.",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "It’s a surprise for my girlfriend. I won’t tell it to anybody.",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "I still don’t know. Maybe you have some good idea of a place to go to?",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "Oh that’s bad! I’m sorry. Is there something i can do for you?",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "Yes, if you have  you can give me a headache pill",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "No, I’ll just stay in my bed and that’s it for today",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "Do you have some Idea how to treat headache?",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "Well i just wanted to say hello. But i don’t want to bother you. ",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "That’s ok, no Problem. I’m on the way to a soap bubbles exhibition. Do you want to come with me?",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "That’s ok. So i’ll go my way. See you next time.",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "Ah, ok. Hello how are you?",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "This is a beautifull place. I like it as well. Last summer I’ve been there several times. I Like the rest-place under this big tree on the half of the way. ",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "Oh realy. What are your plans for today? Do you want to come with me?",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "I like the silence and Loneliness in the mountains. If possible i choose the smaler and not known ways,",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "Near to the rest place i discovered a Spring where some strange bubbles appear sometimes.",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "I understand this. ",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "nnn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "I could bring you some soap bubbles to play around. ",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "I don’t want to play with soap bubbles! ",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "A soap bubbles exhibition? What is it?",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "There’re shown many topics about soap bubbles: nice photos of soap bubbles, latest scientific findings about soap bubles, … and there’s a Laboratory for your own experiments",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "Well, it’s a quite crazy place for strange people. I’m interested in see who’s messing around there.",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "I’m fine thanks. And how about you?",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "I don’t want to disturb you. But if you don’t mind i’d like to come with you!",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "No Problem, you’re welcome! Let’s go together!",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "to be honest: iI had hoped you would not agree",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "Do you have the necessary equipment?",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "i read about this spring in the newspaper last Week i think. Do you know more about this?",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "No, I’ve fjust been there one time. The place looks a little strange. Like some strange planet",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "Soap bubbles are very silent and lightwight. They can help you to relax …",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "My head is bursting, i don’t want to relax. I want to sleep in my bed …",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "That’s cool i’d like to go there too. Can i come with you?",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            }
+        ]
+    },
+    {
+        "question": "That’s cool i’d like to go there too. Can i come with you?",
+        "answers": [
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            },
+            {
+                "short": "jumpmark",
+                "text": "nn",
+                "next": "filename"
+            }
+        ]
+    }
+]
