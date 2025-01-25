@@ -49,7 +49,8 @@ pub fn next(
 
         *situation= pars_situation(&game_state.nextstage.next_id);
 
-        game_state.nextstage.next = false
+        game_state.nextstage.next = false;
+        game_state.buttonnext = true;
 
     }
 

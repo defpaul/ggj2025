@@ -1,6 +1,7 @@
 mod button;
 mod buble;
 mod story;
+mod text;
 
 use bevy::prelude::*;
 use bevy_inspector_egui::quick::WorldInspectorPlugin;
@@ -19,6 +20,7 @@ struct NextSituation{
 #[derive(Resource)]
 struct GameState {
     buttonnext: bool,
+    buttonhover: usize,
     dialogstage: u16,
     nextstage: NextSituation
 }
@@ -27,6 +29,7 @@ fn main() {
       App::new()
           .insert_resource(GameState{
               buttonnext: true,
+              buttonhover: 0,
               dialogstage: 0,
                 nextstage: NextSituation{
                     next: true,
@@ -39,8 +42,8 @@ fn main() {
           .add_systems(Startup, setup)
           .add_systems(Startup, button::spawn)
           .add_systems(Startup, buble::spawn)
-          .add_systems(Update, button::status_update)
-          .add_systems(Update, story::next)
+          .add_systems(Startup, text::spawn)
+          .add_systems(Update, (story::next, button::status_update, text::update).chain())
           //.add_systems(Update, check)
 
           .run();
