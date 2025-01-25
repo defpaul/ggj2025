@@ -1,0 +1,59 @@
+{
+  "shop_greating" : {
+    "person": "Harri",
+    "dialog": [
+      {
+        "speker": "npc",
+        "text": "hallo traveler how are you"
+      },{
+        "speker": "player",
+        "text": "im fine, nice shop"
+      },{
+        "speker": "npc",
+        "text": "what can i do for you"
+      }
+    ],
+    "ansers": [
+      {
+        "short": "bye",
+        "long": "see you later",
+        "next" : "out_side"
+      },{
+        "short": "buy",
+        "long": "what do you have",
+        "next" : "shop_1"
+      }, {
+        "short": "ask",
+        "long": "i have a question",
+        "next" : "shop_1_ask"
+      }
+    ]
+
+  },
+
+  "out_side" : {
+    "person": "The Outside",
+    "dialog": [
+      {
+        "speker": "npc",
+        "text": "your choise"
+      }
+    ],
+    "ansers": [
+      {
+        "short": "go in",
+        "long": "go in to the shop",
+        "next" : "shop_greating"
+      },{
+        "short": "go in",
+        "long": "go in to the shop",
+        "next" : "shop_greating"
+      },{
+        "short": "go in",
+        "long": "go in to the shop",
+        "next" : "shop_greating"
+      }
+    ]
+
+  }
+}

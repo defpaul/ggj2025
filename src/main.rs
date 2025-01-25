@@ -1,4 +1,6 @@
 mod button;
+mod buble;
+mod story;
 
 use bevy::prelude::*;
 use bevy_inspector_egui::quick::WorldInspectorPlugin;
@@ -10,11 +12,13 @@ const PRESSED_BUTTON: Color = Color::srgb(0.35, 0.75, 0.35);
 
 fn main() {
       App::new()
-          .add_plugins(DefaultPlugins)
+          .add_plugins(DefaultPlugins.set(ImagePlugin::default_nearest()))
           .add_plugins(WorldInspectorPlugin::new())
           .add_systems(Startup, setup)
           .add_systems(Startup, button::spawn)
+          .add_systems(Startup, buble::spawn)
           .add_systems(Update, button::status_update)
+
           .run();
 }
 
