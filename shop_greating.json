@@ -1,0 +1,33 @@
+{
+    "person": "Harri",
+    "dialog": [
+      {
+        "talker": "npc",
+        "text": "hallo traveler how are you"
+      },{
+        "talker": "player",
+        "text": "im fine, nice shop"
+      },{
+        "talker": "npc",
+        "text": "what can i do for you"
+      }
+    ],
+    "ansers": [
+      {
+        "short": "bye",
+        "long": "see you later",
+        "next" : "out_side"
+      },{
+        "short": "buy",
+        "long": "what do you have",
+        "next" : "shop_1"
+      }, {
+        "short": "ask",
+        "long": "i have a question",
+        "next" : "shop_1_ask"
+      }
+    ]
+
+
+
+}
