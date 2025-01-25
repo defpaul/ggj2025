@@ -4,4 +4,28 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-bevy = "0.15.1"
+bevy-inspector-egui = "0.28.1"
+ron = "0.8"
+
+[dependencies.bevy]
+version = "0.15.1"
+features = [
+"dynamic_linking",
+"wayland",
+]
+
+[dependencies.serde]
+version = "1"
+feachers = [
+"derive"
+]
+
+
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.release]
+opt-level = 3
+debug = false

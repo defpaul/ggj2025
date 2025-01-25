@@ -1,0 +1,10 @@
+0(
+    Dialog_partner: "hallo_wie_gehts",
+
+    Antworten: (
+    ("Gut", "1.0"),
+    ("Nicht_so", "1.1"),
+    ("gehtschon", "1.2")
+    )
+
+)
