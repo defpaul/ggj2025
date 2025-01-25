@@ -1,0 +1,26 @@
+{
+    "person": "Harri",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "I understand this. "
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "nnn",
+            "next": "00008.json"
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        }
+    ]
+}

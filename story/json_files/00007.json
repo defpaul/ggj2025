@@ -1,0 +1,26 @@
+{
+    "person": "Harri",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "Well i just wanted to say hello. But i don’t want to bother you. "
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "That’s ok, no Problem. I’m on the way to a soap bubbles exhibition. Do you want to come with me?",
+            "next": "00004.json"
+        },
+        {
+            "short": "keyent",
+            "text": "That’s ok. So i’ll go my way. See you next time.",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "Ah, ok. Hello how are you?",
+            "next": "00005.json"
+        }
+    ]
+}

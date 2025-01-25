@@ -1,0 +1,26 @@
+{
+    "person": "Harri",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "Soap bubbles are very silent and lightwight. They can help you to relax …"
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "My head is bursting, i don’t want to relax. I want to sleep in my bed …",
+            "next": "00005.json"
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "person": "Harri",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "I’m fine thanks. And how about you?"
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": "00008.json"
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        }
+    ]
+}

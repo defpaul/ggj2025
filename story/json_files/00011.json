@@ -1,0 +1,26 @@
+{
+    "person": "Harri",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "A soap bubbles exhibition? What is it?"
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "There’re shown many topics about soap bubbles: nice photos of soap bubbles, latest scientific findings about soap bubles, … and there’s a Laboratory for your own experiments",
+            "next": "00008.json"
+        },
+        {
+            "short": "keyent",
+            "text": "Well, it’s a quite crazy place for strange people. I’m interested in see who’s messing around there.",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        }
+    ]
+}

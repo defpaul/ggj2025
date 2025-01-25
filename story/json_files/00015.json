@@ -1,0 +1,26 @@
+{
+    "person": "Harri",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "That’s cool i’d like to go there too. Can i come with you?"
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": "00005.json"
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        }
+    ]
+}

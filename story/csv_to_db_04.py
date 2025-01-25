@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jan 25 16:50:12 2025
+Created on Sat Jan 25 21:12:05 2025
 
 @author: knoedel
 """
@@ -14,16 +14,16 @@ def read_csv_file(file_path):
     data = pd.read_csv(file_path, header=None, sep=";", dtype=str)  # Treat all as strings
     return data
 
-# Generate a valid filename from a question string
-def generate_filename(question):
-    sanitized = "".join(c if c.isalnum() else "_" for c in question[:30])  # Max 30 chars, replace non-alphanumeric
-    return f"{sanitized}.json"
+# Generate a unique filename based on a numbering system
+def generate_filename(counter):
+    return f"{counter:05}.json"  # 5-digit zero-padded number
 
 # Process the data
 def process_csv_data(data):
     questions_and_answers = []
     current_block = []
     all_questions = {}
+    counter = 1  # Start numbering files from 00001
 
     for row_index, row in data.iterrows():
         if row.isnull().all():  # Empty row indicates the end of a block
@@ -40,13 +40,21 @@ def process_csv_data(data):
                             next_row_index = row_index + 1 + (j * 2)  # Next question is two rows below each answer
                             if next_row_index < len(data) and not data.iloc[next_row_index].isnull().all():
                                 next_question = data.iloc[next_row_index].dropna().iloc[0]
-                                next_filename = generate_filename(next_question)
-                                next_questions.append(next_filename)
+                                # Check if the next question is already mapped to a filename
+                                if next_question not in all_questions:
+                                    all_questions[next_question] = generate_filename(counter)
+                                    counter += 1
+                                next_questions.append(all_questions[next_question])
                             else:
                                 next_questions.append(None)  # No next question
 
                         # Save the question and its answers
+                        if question not in all_questions:
+                            all_questions[question] = generate_filename(counter)
+                            counter += 1
+                        
                         questions_and_answers.append({
+                            "filename": all_questions[question],  # Store the filename for this question
                             "person": "Harri",  # Fixed NPC name
                             "dialog": [
                                 {"talker": "npc", "text": question}
@@ -57,9 +65,6 @@ def process_csv_data(data):
                                 {"short": "keyent", "text": answers[2], "next": next_questions[2]},
                             ]
                         })
-
-                        # Map question to filename for JSON creation later
-                        all_questions[question] = generate_filename(question)
 
             current_block = []  # Reset block
         else:
@@ -78,12 +83,19 @@ def process_csv_data(data):
                     next_row_index = len(data) - 1 + (j * 2)
                     if next_row_index < len(data) and not data.iloc[next_row_index].isnull().all():
                         next_question = data.iloc[next_row_index].dropna().iloc[0]
-                        next_filename = generate_filename(next_question)
-                        next_questions.append(next_filename)
+                        if next_question not in all_questions:
+                            all_questions[next_question] = generate_filename(counter)
+                            counter += 1
+                        next_questions.append(all_questions[next_question])
                     else:
                         next_questions.append(None)
 
+                if question not in all_questions:
+                    all_questions[question] = generate_filename(counter)
+                    counter += 1
+                
                 questions_and_answers.append({
+                    "filename": all_questions[question],
                     "person": "Harri",
                     "dialog": [
                         {"talker": "npc", "text": question}
@@ -94,9 +106,8 @@ def process_csv_data(data):
                         {"short": "keyent", "text": answers[2], "next": next_questions[2]},
                     ]
                 })
-                all_questions[question] = generate_filename(question)
 
-    return questions_and_answers, all_questions
+    return questions_and_answers
 
 # Save JSON files for each question
 def save_questions_as_json(questions_and_answers, base_dir):
@@ -104,8 +115,7 @@ def save_questions_as_json(questions_and_answers, base_dir):
         os.makedirs(base_dir)
 
     for question_data in questions_and_answers:
-        question_text = question_data["dialog"][0]["text"]
-        filename = generate_filename(question_text)
+        filename = question_data.pop("filename")  # Get the filename and remove it from the data
         filepath = os.path.join(base_dir, filename)
         with open(filepath, "w", encoding="utf-8") as json_file:
             json.dump(question_data, json_file, indent=4, ensure_ascii=False)
@@ -117,7 +127,7 @@ if __name__ == "__main__":
 
     # Read and process the CSV file
     data = read_csv_file(file_path)
-    questions_and_answers, all_questions = process_csv_data(data)
+    questions_and_answers = process_csv_data(data)
 
     # Save each question as a separate JSON file
     save_questions_as_json(questions_and_answers, output_dir)
