@@ -1,5 +1,6 @@
 use bevy::prelude::*;
 use bevy::color::palettes::basic;
+use crate::GameState;
 
 const NORMAL_BUTTON: Color = Color::srgb(0.15, 0.15, 0.15);
 const HOVERED_BUTTON: Color = Color::srgb(0.25, 0.25, 0.25);
@@ -136,6 +137,7 @@ pub fn status_update(
         (Changed<Interaction>, With<Button>),
     >,
     mut text_query: Query<&mut Text>,
+    game_state: ResMut<GameState>,
 ) {
     for (interaction, mut color, mut border_color, children) in &mut interaction_query {
         let mut text = text_query.get_mut(children[0]).unwrap();
@@ -155,6 +157,9 @@ pub fn status_update(
                 *color = NORMAL_BUTTON.into();
                 border_color.0 = Color::BLACK;
             }
+        }
+        if game_state.buttonnext {
+            **text = "Next".to_string()
         }
     }
 }

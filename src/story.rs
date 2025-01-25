@@ -2,23 +2,23 @@ use bevy::prelude::*;
 use std::fs;
 use serde::{Deserialize, Serialize};
 use serde_json::Result;
-use crate::NextSituation;
+use crate::{GameState, NextSituation};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Dialog{
     pub talker: String,
     pub text: String
 }
 
 
-#[derive(Serialize, Deserialize, Default)]
+#[derive(Serialize, Deserialize, Default, Debug)]
 pub struct Anser{
     pub short: String,
     pub long: String,
     pub next: String
 }
 
-#[derive(Serialize, Deserialize, Resource, Default)]
+#[derive(Serialize, Deserialize, Resource, Default, Debug)]
 pub struct Situation{
     pub person: String,
     pub dialog: Vec<Dialog>,
@@ -42,14 +42,15 @@ fn pars_situation(
 }
 
 pub fn next(
-    mut next_situation: ResMut<NextSituation>,
+    mut game_state: ResMut<GameState>,
     mut situation: ResMut<Situation>,
 ){
-    if next_situation.next {
+    if game_state.nextstage.next {
 
-        *situation= pars_situation(&next_situation.next_id);
+        *situation= pars_situation(&game_state.nextstage.next_id);
 
-        next_situation.next = false
+        game_state.nextstage.next = false
 
     }
+
 }
