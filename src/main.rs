@@ -14,7 +14,8 @@ const PRESSED_BUTTON: Color = Color::srgb(0.35, 0.75, 0.35);
 #[derive(Resource)]
 struct NextSituation{
    next: bool,
-    next_id: String
+    next_id: String,
+    path: String,
 }
 
 #[derive(Component, Clone, PartialOrd, PartialEq)]
@@ -55,6 +56,7 @@ fn main() {
                 nextstage: NextSituation{
                     next: true,
                     next_id: "question_000".to_string(),
+                    path: "story/output_jsons/".to_string()
                     //next_id: "shop_greating".to_string(),
                 },
               buttons: Buttonstate{

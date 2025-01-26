@@ -29,9 +29,10 @@ pub struct Situation{
 
 fn pars_situation(
     next_situation: &str,
+    path: &str,
 ) -> Situation {
 
-    let path = format!("story/output_jsons/{next_situation}.json");
+    let path = format!("{path}{next_situation}.json");
     //let path = format!("{next_situation}.json");
     println!("{}", path);
 
@@ -50,7 +51,7 @@ pub fn next(
 ){
     if game_state.nextstage.next {
 
-        *situation= pars_situation(&game_state.nextstage.next_id);
+        *situation= pars_situation(&game_state.nextstage.next_id, &game_state.nextstage.path);
 
         game_state.nextstage.next = false;
         game_state.buttons.next = true;
