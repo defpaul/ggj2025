@@ -1,5 +1,8 @@
 {
+    "filename" : "shop_greating.json",
     "person": "Harri",
+    "place" : "shop",
+    
     "dialog": [
       {
         "talker": "npc",

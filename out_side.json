@@ -1,5 +1,7 @@
 {
-    "person": "Harri",
+    "filename" : "out_side.json",
+    "person": "Eine stimme aus dem off",
+    "place" : "in front of the shop",
     "dialog": [
       {
         "talker": "npc",

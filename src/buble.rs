@@ -8,7 +8,7 @@ pub fn spawn(
     commands.spawn((
         Sprite::from_image(asset_server.load("GGJ_25/bubble_02.png")),
         Transform{
-            translation: Vec3::new(-500.0, 300.0, 1.0),
+            translation: Vec3::new(-500.0, 200.0, 1.0),
             scale: Vec3::splat(10.0),
             ..default()
         }

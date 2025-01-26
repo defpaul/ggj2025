@@ -71,7 +71,7 @@ fn main() {
           .add_systems(Startup, button::spawn)
           .add_systems(Startup, buble::spawn)
           .add_systems(Startup, text::spawn)
-          .add_systems(Update, (story::next, button::status_update, text::update).chain())
+          .add_systems(Update, (story::next, button::status_update, text::update, text::update_info).chain())
           //.add_systems(Update, check)
 
           .run();

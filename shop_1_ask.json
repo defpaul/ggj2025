@@ -1,5 +1,7 @@
 {
+    "filename" : "shop_1_ask.json",
     "person": "Harri",
+    "place" : "shop",
     "dialog": [
       {
         "talker": "player",

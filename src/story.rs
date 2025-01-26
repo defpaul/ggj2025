@@ -20,7 +20,9 @@ pub struct Anser{
 
 #[derive(Serialize, Deserialize, Resource, Default, Debug)]
 pub struct Situation{
+    pub filename: String,
     pub person: String,
+    pub place: String,
     pub dialog: Vec<Dialog>,
     pub ansers: [Anser; 3]
 }
