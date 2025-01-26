@@ -14,7 +14,7 @@ pub struct Dialog{
 #[derive(Serialize, Deserialize, Default, Debug)]
 pub struct Anser{
     pub short: String,
-    pub long: String,
+    pub text: String,
     pub next: String
 }
 
@@ -24,14 +24,15 @@ pub struct Situation{
     pub person: String,
     pub place: String,
     pub dialog: Vec<Dialog>,
-    pub ansers: [Anser; 3]
+    pub answers: [Anser; 3]
 }
 
 fn pars_situation(
     next_situation: &str,
 ) -> Situation {
 
-    let path = format!("{next_situation}.json");
+    let path = format!("story/output_jsons/{next_situation}.json");
+    //let path = format!("{next_situation}.json");
     println!("{}", path);
 
     let file = fs::read_to_string(path)

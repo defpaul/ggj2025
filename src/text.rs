@@ -135,13 +135,13 @@ pub fn update (
             text_npc = situation.dialog[dialog_state].text.clone();
             if game_state.buttons.action == ButtonAction::Hoverd {
                 if game_state.buttons.button == Buttons::Right {
-                    text_player = situation.ansers[0].long.clone()
+                    text_player = situation.answers[0].text.clone()
                 }
                 if game_state.buttons.button == Buttons::Mitter {
-                    text_player = situation.ansers[1].long.clone()
+                    text_player = situation.answers[1].text.clone()
                 }
                 if game_state.buttons.button == Buttons::Left {
-                    text_player = situation.ansers[2].long.clone()
+                    text_player = situation.answers[2].text.clone()
                 }
             }
         } else if dialog_state == max_dialog-1{
@@ -149,13 +149,13 @@ pub fn update (
             text_npc = situation.dialog[dialog_state].text.clone();
             if game_state.buttons.action == ButtonAction::Hoverd{
                 if game_state.buttons.button == Buttons::Right {
-                    text_player = situation.ansers[0].long.clone()
+                    text_player = situation.answers[0].text.clone()
                 }
                 if game_state.buttons.button == Buttons::Mitter {
-                    text_player = situation.ansers[1].long.clone()
+                    text_player = situation.answers[1].text.clone()
                 }
                 if game_state.buttons.button == Buttons::Left {
-                    text_player = situation.ansers[2].long.clone()
+                    text_player = situation.answers[2].text.clone()
                 }
             }
 

@@ -54,7 +54,8 @@ fn main() {
               dialogstage: 0,
                 nextstage: NextSituation{
                     next: true,
-                    next_id: "shop_greating".to_string(),
+                    next_id: "question_000".to_string(),
+                    //next_id: "shop_greating".to_string(),
                 },
               buttons: Buttonstate{
                   delay: 20,

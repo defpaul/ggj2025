@@ -1,5 +1,4 @@
 use bevy::prelude::*;
-use bevy::color::palettes::basic;
 use crate::{ButtonAction, Buttons, GameState};
 use crate::story::Situation;
 
@@ -182,13 +181,13 @@ pub fn status_update(
             **text = "Next".to_string()
         }else {
             if *button_b == Buttons::Right {
-                **text = situation.ansers[0].short.clone()
+                **text = situation.answers[0].short.clone()
             }
             if *button_b == Buttons::Mitter {
-                **text = situation.ansers[1].short.clone()
+                **text = situation.answers[1].short.clone()
             }
             if *button_b == Buttons::Left {
-                **text = situation.ansers[2].short.clone()
+                **text = situation.answers[2].short.clone()
             }
 
         }
@@ -205,7 +204,7 @@ pub fn status_update(
             }
 
             if !game_state.buttons.next {
-                if hoverd {
+                if hoverd{
                     game_state.buttons.action = ButtonAction::Hoverd;
                     game_state.buttons.button = button.clone()
                 };
@@ -213,15 +212,15 @@ pub fn status_update(
                     game_state.buttons.action = ButtonAction::Pressed;
                     if button == Buttons::Right {
                         game_state.nextstage.next = true;
-                        game_state.nextstage.next_id = situation.ansers[0].next.clone()
+                        game_state.nextstage.next_id = situation.answers[0].next.clone()
                     }
                     if button == Buttons::Mitter {
                         game_state.nextstage.next = true;
-                        game_state.nextstage.next_id = situation.ansers[1].next.clone()
+                        game_state.nextstage.next_id = situation.answers[1].next.clone()
                     }
                     if button == Buttons::Left {
                         game_state.nextstage.next = true;
-                        game_state.nextstage.next_id = situation.ansers[2].next.clone()
+                        game_state.nextstage.next_id = situation.answers[2].next.clone()
                     }
                 }
             };
