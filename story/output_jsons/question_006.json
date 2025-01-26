@@ -5,7 +5,7 @@
     "dialog": [
         {
             "talker": "npc",
-            "text": "I could bring you some soap bubbles to play around. "
+            "text": "I could bring you some soap bubbles \nto play around. "
         }
     ],
     "answers": [
@@ -16,7 +16,7 @@
         },
         {
             "short": "keyent",
-            "text": "I don’t want to play with soap bubbles! ",
+            "text": "I don’t want to play with \nsoap bubbles! ",
             "next": "question_011"
         },
         {

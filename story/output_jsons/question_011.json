@@ -5,13 +5,13 @@
     "dialog": [
         {
             "talker": "npc",
-            "text": "Soap bubbles are very silent and lightwight. They can help you to relax …"
+            "text": "Soap bubbles are very silent and \nlightwight. They can help you \nto relax …"
         }
     ],
     "answers": [
         {
             "short": "keyent",
-            "text": "My head is bursting, i don’t want to relax. I want to sleep in my bed …",
+            "text": "My head is bursting, i don’t want \nto relax. I want to sleep in my bed …",
             "next": "null"
         },
         {

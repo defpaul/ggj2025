@@ -5,7 +5,7 @@
     "dialog": [
         {
             "talker": "npc",
-            "text": "I’m fine thanks. And how about you?"
+            "text": "I’m fine thanks. \nAnd how about you?"
         }
     ],
     "answers": [

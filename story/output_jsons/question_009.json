@@ -5,23 +5,23 @@
     "dialog": [
         {
             "talker": "npc",
-            "text": "I don’t want to disturb you. But if you don’t mind i’d like to come with you!"
+            "text": "I don’t want to disturb you. But \nif you don’t mind i’d like to \ncome with you!"
         }
     ],
     "answers": [
         {
             "short": "keyent",
-            "text": "No Problem, you’re welcome! Let’s go together!",
+            "text": "No Problem, you’re welcome! \nLet’s go together!",
             "next": "null"
         },
         {
             "short": "keyent",
-            "text": "to be honest: iI had hoped you would not agree",
+            "text": "to be honest: \nI had hoped you would not agree",
             "next": "null"
         },
         {
             "short": "keyent",
-            "text": "Do you have the necessary equipment?",
+            "text": "Do you have the necessary \nequipment?",
             "next": "null"
         }
     ]

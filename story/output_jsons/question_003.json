@@ -5,18 +5,18 @@
     "dialog": [
         {
             "talker": "npc",
-            "text": "Well i just wanted to say hello. But i don’t want to bother you. "
+            "text": "Well i just wanted to say hello. \nBut i don’t want to bother you. "
         }
     ],
     "answers": [
         {
             "short": "keyent",
-            "text": "That’s ok, no Problem. I’m on the way to a soap bubbles exhibition. Do you want to come with me?",
+            "text": "That’s ok, no Problem. I’m on the \nway to a soap bubbles exhibition. Do \nyou want to come with me?",
             "next": "question_007"
         },
         {
             "short": "keyent",
-            "text": "That’s ok. So i’ll go my way. See you next time.",
+            "text": "That’s ok. So i’ll go my way. \nSee you next time.",
             "next": "null"
         },
         {

@@ -5,7 +5,7 @@
     "dialog": [
         {
             "talker": "npc",
-            "text": "That’s cool i’d like to go there too. Can i come with you?"
+            "text": "That’s cool i’d like to go there \ntoo. Can i come with you?"
         }
     ],
     "answers": [

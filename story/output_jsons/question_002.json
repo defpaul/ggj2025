@@ -5,23 +5,23 @@
     "dialog": [
         {
             "talker": "npc",
-            "text": "Oh that’s bad! I’m sorry. Is there something i can do for you?"
+            "text": "Oh that’s bad! I’m sorry. Is there \nsomething i can do for you?"
         }
     ],
     "answers": [
         {
             "short": "keyent",
-            "text": "Yes, if you have  you can give me a headache pill",
+            "text": "Yes, if you have  you can give \nme a headache pill",
             "next": "null"
         },
         {
             "short": "keyent",
-            "text": "No, I’ll just stay in my bed and that’s it for today",
+            "text": "No, I’ll just stay in my bed and \nthat’s it for today",
             "next": "question_006"
         },
         {
             "short": "keyent",
-            "text": "Do you have some Idea how to treat headache?",
+            "text": "Do you have some Idea how to \ntreat headache?",
             "next": "null"
         }
     ]

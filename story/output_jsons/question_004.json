@@ -5,23 +5,23 @@
     "dialog": [
         {
             "talker": "npc",
-            "text": "This is a beautifull place. I like it as well. Last summer I’ve been there several times. I Like the rest-place under this big tree on the half of the way. "
+            "text": "This is a beautifull place. I like \nit as well. Last summer I’ve been \nthere several times. I Like the \nrest-place under this big tree on the \nhalf of the way. "
         }
     ],
     "answers": [
         {
             "short": "keyent",
-            "text": "Oh realy. What are your plans for today? Do you want to come with me?",
+            "text": "Oh realy. What are your plans for \ntoday? Do you want to come with me?",
             "next": "question_009"
         },
         {
             "short": "keyent",
-            "text": "I like the silence and Loneliness in the mountains. If possible i choose the smaler and not known ways,",
+            "text": "I like the silence and Loneliness \nin the mountains. If possible i choose \nthe smaler and not known ways,",
             "next": "null"
         },
         {
             "short": "keyent",
-            "text": "Near to the rest place i discovered a Spring where some strange bubbles appear sometimes.",
+            "text": "Near to the rest place i discovered \na Spring where some strange bubbles \nappear sometimes.",
             "next": "question_010"
         }
     ]
