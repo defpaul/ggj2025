@@ -10,17 +10,17 @@
     ],
     "answers": [
         {
-            "short": "keyent",
-            "text": "nn",
+            "short": "friend",
+            "text": "A friend told me it's dangerous \nthere",
             "next": "null"
         },
         {
-            "short": "keyent",
-            "text": "No, I’ve fjust been there one time. \nThe place looks a little strange. \nLike some strange planet",
+            "short": "strange",
+            "text": "No, I’ve just been there one time. \nThe place looks a little strange. \nLike some strange planet",
             "next": "null"
         },
         {
-            "short": "keyent",
+            "short": "sulfur",
             "text": "nn",
             "next": "null"
         }

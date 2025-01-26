@@ -1,7 +1,7 @@
 {
     "filename": "question_007.json",
     "person": "Harri",
-    "place": "planet earth",
+    "place": "on the road",
     "dialog": [
         {
             "talker": "npc",
@@ -10,17 +10,17 @@
     ],
     "answers": [
         {
-            "short": "keyent",
+            "short": "expl",
             "text": "There’re shown many topics about \nsoap bubbles: nice photos of soap \nbubbles, latest scientific findings \nabout soap bubles, … and there’s a \nLaboratory for your own experiments",
             "next": "question_012"
         },
         {
-            "short": "keyent",
+            "short": "crazy",
             "text": "Well, it’s a quite crazy place for \nstrange people. I’m interested in see \nwho’s messing around there.",
             "next": "question_013"
         },
         {
-            "short": "keyent",
+            "short": "empty",
             "text": "nn",
             "next": "null"
         }
