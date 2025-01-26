@@ -68,7 +68,7 @@ fn main() {
               }
           })
           .insert_resource(Situation{..default()})
-          .add_plugins(DefaultPlugins.set(ImagePlugin::default_nearest()))
+          //.add_plugins(DefaultPlugins.set(ImagePlugin::default_nearest()))
           .add_plugins(WorldInspectorPlugin::new())
           .add_systems(Startup, setup)
           .add_systems(Startup, button::spawn)
