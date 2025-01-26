@@ -4,7 +4,11 @@
 Created on Sat Jan 25 15:58:07 2025
 
 @author: knoedel
+
+correct export of CSV to a single json-File
+
 """
+
 
 import pandas as pd
 import json
@@ -33,9 +37,9 @@ def process_csv_data(data):
                         questions_and_answers.append({
                             "question": question,
                             "answers": [
-                                {"short":"jumpmark", "text": answers[0], "next": "filename"},   
-                                {"short":"jumpmark", "text": answers[1], "next": "filename"},  
-                                {"short":"jumpmark", "text": answers[2], "next": "filename"}  
+                                {"short":"keyent", "text": answers[0], "next": "filename"},   
+                                {"short":"keyent", "text": answers[1], "next": "filename"},  
+                                {"short":"keyent", "text": answers[2], "next": "filename"}  
                             ]
                         })
             current_block = []  # Reset block
@@ -54,9 +58,9 @@ def process_csv_data(data):
                 questions_and_answers.append({
                     "question": question,
                     "answers": [
-                        {"short":"jumpmark", "text": answers[0], "next": "filename"},   
-                        {"short":"jumpmark", "text": answers[1], "next": "filename"},  
-                        {"short":"jumpmark", "text": answers[2], "next": "filename"}  
+                        {"short":"keyent", "text": answers[0], "next": "filename"},   
+                        {"short":"keyent", "text": answers[1], "next": "filename"},  
+                        {"short":"keyent", "text": answers[2], "next": "filename"}  
                     ]
                 })
 
