@@ -1,6 +1,7 @@
 use bevy::prelude::*;
 use bevy::color::palettes::basic;
-use crate::GameState;
+use crate::{ButtonAction, Buttons, GameState};
+use crate::story::Situation;
 
 const NORMAL_BUTTON: Color = Color::srgb(0.15, 0.15, 0.15);
 const HOVERED_BUTTON: Color = Color::srgb(0.25, 0.25, 0.25);
@@ -37,6 +38,7 @@ pub fn spawn(
                     BorderColor(Color::BLACK),
                     BorderRadius::MAX,
                     BackgroundColor(NORMAL_BUTTON),
+                    Buttons::Left
                 ))
                 .with_child((
                     Text::new("Button"),
@@ -74,6 +76,7 @@ pub fn spawn(
                     BorderColor(Color::BLACK),
                     BorderRadius::MAX,
                     BackgroundColor(NORMAL_BUTTON),
+                    Buttons::Mitter,
                 ))
                 .with_child((
                     Text::new("Button"),
@@ -111,6 +114,7 @@ pub fn spawn(
                     BorderColor(Color::BLACK),
                     BorderRadius::MAX,
                     BackgroundColor(NORMAL_BUTTON),
+                    Buttons::Right
                 ))
                 .with_child((
                     Text::new("Button"),
@@ -133,33 +137,100 @@ pub fn status_update(
             &mut BackgroundColor,
             &mut BorderColor,
             &Children,
+            &Buttons,
         ),
         (Changed<Interaction>, With<Button>),
     >,
     mut text_query: Query<&mut Text>,
-    game_state: ResMut<GameState>,
+    mut game_state: ResMut<GameState>,
+    situation: Res<Situation>
 ) {
-    for (interaction, mut color, mut border_color, children) in &mut interaction_query {
+
+
+    let mut pressed: bool = false;
+    let mut hoverd: bool = false;
+
+    let mut button_num = 0;
+
+    let mut button:Buttons = Buttons::No;
+
+    for (interaction, mut color, mut border_color, children, button_b) in &mut interaction_query {
         let mut text = text_query.get_mut(children[0]).unwrap();
+
+        button_num += 1;
+
+
         match *interaction {
             Interaction::Pressed => {
-                **text = "Press".to_string();
-                *color = PRESSED_BUTTON.into();
-                border_color.0 = RED.into();
+                pressed = true;
+                button = button_b.clone();
             }
             Interaction::Hovered => {
-                **text = "Hover".to_string();
                 *color = HOVERED_BUTTON.into();
                 border_color.0 = Color::WHITE;
+                hoverd = true;
+                button = button_b.clone();
             }
             Interaction::None => {
-                **text = "Button".to_string();
                 *color = NORMAL_BUTTON.into();
                 border_color.0 = Color::BLACK;
             }
         }
-        if game_state.buttonnext {
+
+
+        if game_state.buttons.next {
             **text = "Next".to_string()
+        }else {
+            if *button_b == Buttons::Right {
+                **text = situation.ansers[0].short.clone()
+            }
+            if *button_b == Buttons::Mitter {
+                **text = situation.ansers[1].short.clone()
+            }
+            if *button_b == Buttons::Left {
+                **text = situation.ansers[2].short.clone()
+            }
+
         }
+
+
     }
+
+
+    if !game_state.nextstage.next {
+        if game_state.buttons.delay == 0 {
+            if pressed && game_state.buttons.next{
+                game_state.buttons.delay = 20;
+                game_state.dialogstage += 1;
+            }
+
+            if !game_state.buttons.next {
+                if hoverd {
+                    game_state.buttons.action = ButtonAction::Hoverd;
+                    game_state.buttons.button = button.clone()
+                };
+                if pressed {
+                    game_state.buttons.action = ButtonAction::Pressed;
+                    if button == Buttons::Right {
+                        game_state.nextstage.next = true;
+                        game_state.nextstage.next_id = situation.ansers[0].next.clone()
+                    }
+                    if button == Buttons::Mitter {
+                        game_state.nextstage.next = true;
+                        game_state.nextstage.next_id = situation.ansers[1].next.clone()
+                    }
+                    if button == Buttons::Left {
+                        game_state.nextstage.next = true;
+                        game_state.nextstage.next_id = situation.ansers[2].next.clone()
+                    }
+                }
+            };
+
+
+        } else {
+            game_state.buttons.delay -=1;
+        }
+
+    }
+
 }

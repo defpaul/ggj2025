@@ -17,24 +17,52 @@ struct NextSituation{
     next_id: String
 }
 
+#[derive(Component, Clone, PartialOrd, PartialEq)]
+enum Buttons{
+    Mitter,
+    Left,
+    Right,
+    No
+}
+
+#[derive(PartialOrd, PartialEq)]
+enum ButtonAction{
+    Pressed,
+    Hoverd,
+    No
+}
+
+#[derive(Resource)]
+struct Buttonstate{
+    delay: usize,
+    action: ButtonAction,
+    button: Buttons,
+    next: bool,
+
+}
+
 #[derive(Resource)]
 struct GameState {
-    buttonnext: bool,
-    buttonhover: usize,
     dialogstage: u16,
-    nextstage: NextSituation
+    nextstage: NextSituation,
+    buttons: Buttonstate
 }
 
 fn main() {
       App::new()
           .insert_resource(GameState{
-              buttonnext: true,
-              buttonhover: 0,
               dialogstage: 0,
                 nextstage: NextSituation{
                     next: true,
                     next_id: "shop_greating".to_string(),
-                }
+                },
+              buttons: Buttonstate{
+                  delay: 20,
+                  action: ButtonAction::No,
+                  button: Buttons::No,
+                  next: true,
+
+              }
           })
           .insert_resource(Situation{..default()})
           .add_plugins(DefaultPlugins.set(ImagePlugin::default_nearest()))

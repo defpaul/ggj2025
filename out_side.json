@@ -1,0 +1,27 @@
+{
+    "person": "Harri",
+    "dialog": [
+      {
+        "talker": "npc",
+        "text": "your chois"
+      }
+   ],
+    "ansers": [
+      {
+        "short": "enter",
+        "long": "go inside",
+        "next" : "shop_greating"
+      },{
+        "short": "enter",
+        "long": "go inside",
+        "next" : "shop_greating"
+      }, {
+        "short": "enter",
+        "long": "go inside",
+        "next" : "shop_greating"
+      }
+    ]
+
+
+
+}

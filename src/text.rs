@@ -1,7 +1,10 @@
+use std::cmp::max;
 use bevy::prelude::*;
 use bevy::color::palettes::css::*;
 use bevy::sprite::Anchor;
-use crate::{GameState};
+use bevy::ui::debug::print_ui_layout_tree;
+use bevy_inspector_egui::egui::debug_text::print;
+use crate::{ButtonAction, Buttons, GameState};
 use crate::story::Situation;
 use crate::text::Persons::{Npc, Player};
 
@@ -75,44 +78,80 @@ pub fn update (
     let mut text_player: String = "".to_string();
 
 
-    if dialog_state == max_dialog {
-        game_state.buttonnext = false;
-        text_npc = situation.dialog[dialog_state].text.clone();
-    }else if dialog_state >= 1 {
-        let text = situation.dialog[dialog_state].text.clone();
-        let text_bevor = situation.dialog[dialog_state-1].text.clone();
-        if text != text_bevor {
-            if situation.dialog[dialog_state].talker == "npc".to_string() {
-                text_npc = situation.dialog[dialog_state].text.clone()
+    if !game_state.nextstage.next {
+
+        if max_dialog == 1 {
+            game_state.buttons.next = false;
+            text_npc = situation.dialog[dialog_state].text.clone();
+            if game_state.buttons.action == ButtonAction::Hoverd {
+                if game_state.buttons.button == Buttons::Right {
+                    text_player = situation.ansers[0].long.clone()
+                }
+                if game_state.buttons.button == Buttons::Mitter {
+                    text_player = situation.ansers[1].long.clone()
+                }
+                if game_state.buttons.button == Buttons::Left {
+                    text_player = situation.ansers[2].long.clone()
+                }
             }
-            if situation.dialog[dialog_state].talker == "player".to_string() {
-                text_player = situation.dialog[dialog_state].text.clone();
-                text_npc = situation.dialog[dialog_state-1].text.clone()
+        } else if dialog_state == max_dialog-1{
+            game_state.buttons.next = false;
+            text_npc = situation.dialog[dialog_state].text.clone();
+            if game_state.buttons.action == ButtonAction::Hoverd{
+                if game_state.buttons.button == Buttons::Right {
+                    text_player = situation.ansers[0].long.clone()
+                }
+                if game_state.buttons.button == Buttons::Mitter {
+                    text_player = situation.ansers[1].long.clone()
+                }
+                if game_state.buttons.button == Buttons::Left {
+                    text_player = situation.ansers[2].long.clone()
+                }
             }
 
-        } else if text == text_bevor {
-            if situation.dialog[dialog_state].talker == "npc".to_string() {
-                text_npc = situation.dialog[dialog_state].text.clone()
+
+
+        }else if dialog_state == 0 {
+
+            if situation.dialog[dialog_state].talker == "npc".to_string(){
+               text_npc = situation.dialog[dialog_state].text.clone()
+             }
+            if situation.dialog[dialog_state].talker == "player".to_string(){
+                text_player = situation.dialog[dialog_state].text.clone()
             }
-            if situation.dialog[dialog_state].talker == "player".to_string() {
-                text_player = situation.dialog[dialog_state].text.clone();
+
+        }else if dialog_state > 0 {
+            let text = situation.dialog[dialog_state].talker.clone();
+            let mut text_bevor = situation.dialog[dialog_state-1].talker.clone();
+
+            if text != text_bevor {
+                if situation.dialog[dialog_state].talker == "npc".to_string() {
+                    text_npc = situation.dialog[dialog_state].text.clone()
+                }
+                if situation.dialog[dialog_state].talker == "player".to_string() {
+                    text_player = situation.dialog[dialog_state].text.clone();
+                    text_npc = situation.dialog[dialog_state-1].text.clone()
+                }
+
+            } else if text == text_bevor {
+                if situation.dialog[dialog_state].talker == "npc".to_string() {
+                    text_npc = situation.dialog[dialog_state].text.clone()
+                }
+                if situation.dialog[dialog_state].talker == "player".to_string() {
+                    text_player = situation.dialog[dialog_state].text.clone();
+                }
             }
         }
-    } else if dialog_state == 0 {
-        if situation.dialog[dialog_state].talker == "npc".to_string() {
-            text_npc = situation.dialog[dialog_state].text.clone()
-        }
-        if situation.dialog[dialog_state].talker == "player".to_string() {
-            text_player = situation.dialog[dialog_state].text.clone()
+
+        for (mut text, id) in &mut q_text {
+            if id.person == Persons::Player{
+                text.0 = text_player.to_string()
+            }
+            if id.person == Persons::Npc {
+                text.0 = text_npc.to_string()
+            }
         }
     }
 
-    for (mut text, id) in &mut q_text {
-        if id.person == Persons::Player{
-            text.0 = text_player.to_string()
-        }
-        if id.person == Persons::Npc {
-            text.0 = text_npc.to_string()
-        }
-    }
+
 }

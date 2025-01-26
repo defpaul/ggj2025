@@ -1,0 +1,33 @@
+{
+    "person": "Harri",
+    "dialog": [
+      {
+        "talker": "player",
+        "text": "wahats about the old house"
+      },{
+        "talker": "npc",
+        "text": "its dagerous"
+      },{
+        "talker": "npc",
+        "text": "you wont gona go ther"
+      }
+    ],
+    "ansers": [
+      {
+        "short": "bye",
+        "long": "see you later",
+        "next" : "out_side"
+      },{
+        "short": "buy",
+        "long": "what do you have",
+        "next" : "shop_greating"
+      }, {
+        "short": "ask",
+        "long": "i have a question",
+        "next" : "shop_1_ask"
+      }
+    ]
+
+
+
+}
