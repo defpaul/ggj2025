@@ -1,0 +1,28 @@
+{
+    "filename": "question_000.json",
+    "person": "Harri",
+    "place": "planet earth",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "Hello, nice to meet you! How are you?"
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "I’m fine thank you. I'm going on a trip in this beautiful weather. What about you?",
+            "next": "question_001"
+        },
+        {
+            "short": "keyent",
+            "text": "My Head is bursting. Just leave me allone!",
+            "next": "question_002"
+        },
+        {
+            "short": "keyent",
+            "text": "Excuse me?",
+            "next": "question_003"
+        }
+    ]
+}

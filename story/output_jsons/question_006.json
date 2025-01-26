@@ -1,0 +1,28 @@
+{
+    "filename": "question_006.json",
+    "person": "Harri",
+    "place": "planet earth",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "I could bring you some soap bubbles to play around. "
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "I don’t want to play with soap bubbles! ",
+            "next": "question_011"
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        }
+    ]
+}

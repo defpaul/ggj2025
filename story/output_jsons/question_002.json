@@ -1,0 +1,28 @@
+{
+    "filename": "question_002.json",
+    "person": "Harri",
+    "place": "planet earth",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "Oh that’s bad! I’m sorry. Is there something i can do for you?"
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "Yes, if you have  you can give me a headache pill",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "No, I’ll just stay in my bed and that’s it for today",
+            "next": "question_006"
+        },
+        {
+            "short": "keyent",
+            "text": "Do you have some Idea how to treat headache?",
+            "next": null
+        }
+    ]
+}

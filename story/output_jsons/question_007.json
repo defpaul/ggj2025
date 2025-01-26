@@ -1,0 +1,28 @@
+{
+    "filename": "question_007.json",
+    "person": "Harri",
+    "place": "planet earth",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "A soap bubbles exhibition? What is it?"
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "There’re shown many topics about soap bubbles: nice photos of soap bubbles, latest scientific findings about soap bubles, … and there’s a Laboratory for your own experiments",
+            "next": "question_012"
+        },
+        {
+            "short": "keyent",
+            "text": "Well, it’s a quite crazy place for strange people. I’m interested in see who’s messing around there.",
+            "next": "question_013"
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        }
+    ]
+}

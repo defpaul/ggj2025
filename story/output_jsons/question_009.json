@@ -1,0 +1,28 @@
+{
+    "filename": "question_009.json",
+    "person": "Harri",
+    "place": "planet earth",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "I don’t want to disturb you. But if you don’t mind i’d like to come with you!"
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "No Problem, you’re welcome! Let’s go together!",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "to be honest: iI had hoped you would not agree",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "Do you have the necessary equipment?",
+            "next": null
+        }
+    ]
+}

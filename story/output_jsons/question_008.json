@@ -1,0 +1,28 @@
+{
+    "filename": "question_008.json",
+    "person": "Harri",
+    "place": "planet earth",
+    "dialog": [
+        {
+            "talker": "npc",
+            "text": "I’m fine thanks. And how about you?"
+        }
+    ],
+    "answers": [
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        },
+        {
+            "short": "keyent",
+            "text": "nn",
+            "next": null
+        }
+    ]
+}
