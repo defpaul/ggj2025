@@ -5,23 +5,23 @@
     "dialog": [
         {
             "talker": "npc",
-            "text": "That’s a good Idea! Where are you going?"
+            "text": "That’s a good Idea! \nWhere are you going?"
         }
     ],
     "answers": [
         {
             "short": "keyent",
-            "text": "I’m going on a walk in the mountains and have some beer at a „Hütte“ there.",
+            "text": "I’m going on a walk in the mountains \nand have some beer at a >Hütte< there.",
             "next": "question_004"
         },
         {
             "short": "keyent",
-            "text": "It’s a surprise for my girlfriend. I won’t tell it to anybody.",
+            "text": "It’s a surprise for my girlfriend. \nI won’t tell it to anybody.",
             "next": "null"
         },
         {
             "short": "keyent",
-            "text": "I still don’t know. Maybe you have some good idea of a place to go to?",
+            "text": "I still don’t know. Maybe you have \nsome good idea of a place to go to?",
             "next": "question_005"
         }
     ]

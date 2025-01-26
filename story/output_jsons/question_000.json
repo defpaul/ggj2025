@@ -5,18 +5,18 @@
     "dialog": [
         {
             "talker": "npc",
-            "text": "Hello, nice to meet you! How are you?"
+            "text": "Hello, nice to meet you! \nHow are you?"
         }
     ],
     "answers": [
         {
             "short": "keyent",
-            "text": "I’m fine thank you. I'm going on a trip in this beautiful weather. What about you?",
+            "text": "I’m fine thank you. I'm going on a \ntrip in this beautiful weather. \nWhat about you?",
             "next": "question_001"
         },
         {
             "short": "keyent",
-            "text": "My Head is bursting. Just leave me allone!",
+            "text": "My Head is bursting. \nJust leave me allone!",
             "next": "question_002"
         },
         {
