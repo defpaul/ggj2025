@@ -12,7 +12,7 @@
         {
             "short": "keyent",
             "text": "Yes, if you have  you can give me a headache pill",
-            "next": null
+            "next": "null"
         },
         {
             "short": "keyent",
@@ -22,7 +22,7 @@
         {
             "short": "keyent",
             "text": "Do you have some Idea how to treat headache?",
-            "next": null
+            "next": "null"
         }
     ]
 }

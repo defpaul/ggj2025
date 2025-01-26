@@ -12,17 +12,17 @@
         {
             "short": "keyent",
             "text": "No Problem, you’re welcome! Let’s go together!",
-            "next": null
+            "next": "null"
         },
         {
             "short": "keyent",
             "text": "to be honest: iI had hoped you would not agree",
-            "next": null
+            "next": "null"
         },
         {
             "short": "keyent",
             "text": "Do you have the necessary equipment?",
-            "next": null
+            "next": "null"
         }
     ]
 }

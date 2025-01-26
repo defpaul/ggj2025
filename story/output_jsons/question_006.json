@@ -12,7 +12,7 @@
         {
             "short": "keyent",
             "text": "nn",
-            "next": null
+            "next": "null"
         },
         {
             "short": "keyent",
@@ -22,7 +22,7 @@
         {
             "short": "keyent",
             "text": "nn",
-            "next": null
+            "next": "null"
         }
     ]
 }

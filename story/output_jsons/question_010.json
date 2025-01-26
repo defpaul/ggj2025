@@ -12,17 +12,17 @@
         {
             "short": "keyent",
             "text": "nn",
-            "next": null
+            "next": "null"
         },
         {
             "short": "keyent",
             "text": "No, I’ve fjust been there one time. The place looks a little strange. Like some strange planet",
-            "next": null
+            "next": "null"
         },
         {
             "short": "keyent",
             "text": "nn",
-            "next": null
+            "next": "null"
         }
     ]
 }
