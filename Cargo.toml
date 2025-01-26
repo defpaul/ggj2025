@@ -13,6 +13,7 @@ version = "0.15.1"
 features = [
 "dynamic_linking",
 "wayland",
+"x11"
 ]
 
 [dependencies.serde]
